@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Love Bé Thư 💖</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(#ffd6e8,#fff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+}
+#playBtn{
+  padding:15px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  background:#ff5fa2;
+  color:white;
+}
+</style>
+</head>
+<body>
+
+<button id="playBtn">💖 Chạm để nghe nhạc 💖</button>
+
+<audio id="music" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const btn = document.getElementById("playBtn");
+const music = document.getElementById("music");
+
+btn.onclick = () => {
+  music.play();
+  btn.innerText = "🎶 Nhạc đang phát...";
+};
+</script>
+
+</body>
+</html>
